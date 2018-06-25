@@ -20,6 +20,18 @@ end
 def find_the_cheese(ingredients)
   cheese_types = ["cheddar", "gouda", "camembert"]
   ingredients.find do |ingredient|
-    cheese_types.include?(ingredient)
+    if cheese_types.include?(ingredient)
+      puts "#{ingredient}"
+    end
   end
 end
+
+def words_that_start_with_b(array)
+  array.select do |word|
+    word.start_with?("b")
+  end
+end
+
+puts words_that_start_with_b(["blue", "green", "big"])
+
+find_the_cheese(["apple", "cheddar", "banana"])
